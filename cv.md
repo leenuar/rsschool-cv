@@ -52,3 +52,5 @@ This CV project is first experience.
 
 *****
 
+### English
+From B1 INTERMEDIATE to B2 UPPER INTERMEDIATE. [EF Test](https://www.efset.org/ru/ "EF Test")
