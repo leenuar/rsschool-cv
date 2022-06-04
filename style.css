@@ -64,6 +64,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--bg) fixed repeat top center;
+  color: var(--text-color);
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -78,12 +80,12 @@ a {
 }
 
 a:not([class]) {
-  color: var(--dark_link);
+  color: var(--link-color);
   transition: color ease .4s
 }
   
 a:not([class]):hover {
-  color: var(--coloring)
+  color: var(--text-color)
 }
 
 /* Упрощаем работу с изображениями */
