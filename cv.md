@@ -26,3 +26,12 @@ So. I worked as web-designer something about five years, but coding it’s what 
 * PS
 * AI
 * Figma
+
+*****
+
+### Code exemple
+```
+function multiply(a, b){
+return a * b;
+}
+```
