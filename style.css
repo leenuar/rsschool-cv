@@ -51,6 +51,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: Inter, sans-serif;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -75,11 +76,6 @@ a:not([class]):hover {
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
   display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
+  object-fit: cover;
 }
