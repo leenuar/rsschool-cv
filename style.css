@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'PPTelegraf';
+    src: url("./assets/fonts/PPTelegraf-UltraLight.otf");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url("./assets/fonts/PPTelegraf-Regular.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+      font-family: "PPTelegraf";
+      src: url("./assets/fonts/PPTelegraf-UltraBold.otf");
+      font-weight: 600;
+  }
+
+  /* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+p,
+ul[class],
+ol[class],
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; 
+  }
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  color: var(--dark_link);
+  transition: color ease .4s
+}
+  
+a:not([class]):hover {
+  color: var(--coloring)
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
