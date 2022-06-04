@@ -29,7 +29,7 @@ So. I worked as web-designer something about five years, but coding it’s what 
 
 *****
 
-### Code exemple
+### Code example
 ```
 function multiply(a, b){
 return a * b;
