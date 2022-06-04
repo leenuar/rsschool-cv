@@ -40,3 +40,15 @@ return a * b;
 
 ### Experience
 This CV project is first experience.
+
+*****
+
+### Education
+* Code Basics
+  * HTML
+  * CSS
+  * JS (in progress)
+* [JS manual](https://learn.javascript.ru/ "JS Manaul") (in progress)
+
+*****
+
