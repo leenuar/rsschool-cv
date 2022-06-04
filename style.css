@@ -17,6 +17,7 @@
 
 :root {
   --bg: url(./assets/img/bg1.jpg);
+  --bg-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
   --bg-color: rgba(0, 0, 0, 0.6);
   --text-color: #C3C3C3;
   --header-color: #D2D2D2;
@@ -64,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--bg) fixed repeat top center;
+  background: var(--bg-overlay), var(--bg) fixed repeat top center;
   color: var(--text-color);
 }
 
