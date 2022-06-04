@@ -15,6 +15,14 @@
       font-weight: 600;
   }
 
+:root {
+  --bg: url(./assets/img/bg1.jpg);
+  --bg-color: rgba(0, 0, 0, 0.6);
+  --text-color: #C3C3C3;
+  --header-color: #D2D2D2;
+  --link-color: #5769A9;  
+}
+
   /* Указываем box sizing */
 *,
 *::before,
@@ -45,6 +53,7 @@ html {
     scroll-behavior: smooth; 
   }
 
+
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
@@ -52,6 +61,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -78,4 +90,9 @@ a:not([class]):hover {
 img {
   display: block;
   object-fit: cover;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
 }
