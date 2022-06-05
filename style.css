@@ -24,7 +24,9 @@
   --header-color: #D2D2D2;
   --link-color: #5769A9; 
   --cubic: cubic-bezier(.64,.51,.55,1); 
-  --borders: rgba(78, 77, 128, 0.14)
+  --borders: rgba(78, 77, 128, 0.14);
+  --progress: rgba(61, 62, 117, 0.1);
+  --percent: #2E3759;
 }
 
   /* Указываем box sizing */
@@ -69,6 +71,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background: var(--bg-overlay), var(--bg) fixed repeat top center;
+  background-size: cover;
   color: var(--text-color);
 }
 
@@ -263,7 +266,7 @@ i.fas, i.fab {
     display: flex;
     justify-content: flex-end;
     gap: 80px;
-    background: var(--bg-color);
+    background: var(--nav-bg);
     border-radius: 30px;
     padding: 40px;
     backdrop-filter: blur(15px);
@@ -287,4 +290,62 @@ i.fas, i.fab {
   
 .text + .text {
     margin-top: 1.5em
+}
+
+.skillis__list {
+    font: 400 13px PPTelegraf;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px
+}
+
+.skills__progress {
+    background: var(--progress);
+    height: 10gotpx;
+    width: 80%;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.precent {
+    background: var(--percent);
+    display: block;
+    height: 100%
+}
+
+.precent.html {
+    width: 100%
+}
+
+.precent.css {
+    width: 90%
+}
+
+.precent.js {
+    width: 20%
+}
+
+.precent.git {
+    width: 35%
+}
+
+.precent.ps {
+    width: 100%
+}
+
+.precent.ai {
+    width: 70%
+}
+
+.precent.figma {
+    width: 100%
 }
