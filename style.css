@@ -17,11 +17,14 @@
 
 :root {
   --bg: url(./assets/img/bg1.jpg);
-  --bg-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-  --bg-color: rgba(0, 0, 0, 0.6);
+  --bg-overlay: linear-gradient(180deg, rgba(14, 14, 19, 0.5) 0%, rgba(14, 14, 19, 0.5) 100%);
+  --nav-bg: rgba(19, 19, 32, 0.5);
+  --bg-color: rgba(0, 0, 0, 0.5);
   --text-color: #C3C3C3;
   --header-color: #D2D2D2;
-  --link-color: #5769A9;  
+  --link-color: #5769A9; 
+  --cubic: cubic-bezier(.64,.51,.55,1); 
+  --borders: rgba(20, 20, 36, 0.8);
 }
 
   /* Указываем box sizing */
@@ -96,6 +99,43 @@ img {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1220px;
     margin: 0 auto;
+}
+
+.nav {
+    background: var(--nav-bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1220px;
+    border-radius: 0 0 30px 30px;
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--borders);
+    border-top: none
+}
+  
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav__item {
+  padding: 20px 0
+}
+  
+  .nav__link {
+    font: 400 15px PPTelegraf;
+    text-transform: uppercase;
+    color: var(--header-color);
+    letter-spacing: .14em;
+    padding: 10px 25px;
+    transition: all .3s var(--cubic) 0s;
+}
+  
+  .nav__link:hover {
+    color: var(--link-color);
+    background: var(--bg-color);
+    border-radius: 15px
 }
