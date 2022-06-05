@@ -358,3 +358,41 @@ i.fas, i.fab {
     font: normal 13px/1.5em system;
     margin-bottom: 25px
 }
+
+.footer .container {
+    background: var(--nav-bg);
+    width: 100%;
+    max-width: 1220px;
+    border-radius: 30px 30px 0px 0px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--borders);
+    border-top: none;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+    font: normal 13px PPTelegraf;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    gap: 30px;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.git i.fab {
+    font-size: 13px
+}
+
+.foo_item.rss__logo {
+    margin-left: auto;
+}
+
+img.rss__logo_pic {
+    width: 70px;
+    filter: invert(100%)
+}
