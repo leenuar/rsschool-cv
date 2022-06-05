@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'PPTelegraf';
+    src: url("./assets/fonts/PPTelegraf-UltraLight.otf");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url("./assets/fonts/PPTelegraf-Regular.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+      font-family: "PPTelegraf";
+      src: url("./assets/fonts/PPTelegraf-UltraBold.otf");
+      font-weight: 600;
+  }
+
+:root {
+  --bg: url(./assets/img/bg1.jpg);
+  --bg-overlay: linear-gradient(180deg, rgba(14, 14, 19, 0.5) 0%, rgba(14, 14, 19, 0.5) 100%);
+  --nav-bg: rgba(19, 19, 32, 0.5);
+  --bg-color: rgba(0, 0, 0, 0.5);
+  --text-color: #C3C3C3;
+  --header-color: #D2D2D2;
+  --link-color: #5769A9; 
+  --cubic: cubic-bezier(.64,.51,.55,1); 
+  --borders: rgba(78, 77, 128, 0.14);
+  --progress: rgba(61, 62, 117, 0.1);
+  --percent: #2E3759;
+}
+
+  /* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+p,
+ul[class],
+ol[class],
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; 
+  }
+
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-overlay), var(--bg) fixed repeat top center;
+  background-size: cover;
+  color: var(--text-color);
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  color: var(--link-color);
+  transition: color ease .4s
+}
+  
+a:not([class]):hover {
+  color: var(--text-color)
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.nav {
+    background: var(--nav-bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1220px;
+    border-radius: 0 0 30px 30px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--borders);
+    border-top: none;
+    z-index: 5 
+}
+  
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav__item {
+  padding: 20px 0
+}
+  
+.nav__link {
+    font: 400 15px PPTelegraf;
+    text-transform: uppercase;
+    color: var(--header-color);
+    letter-spacing: .14em;
+    padding: 10px 25px;
+    transition: all .3s var(--cubic) 0s;
+}
+  
+.nav__link:hover {
+    color: var(--link-color);
+    background: var(--bg-color);
+    border-radius: 15px
+}
+
+/* .section {
+    width: 50%;
+} */
+
+.section {
+    padding-top: 100px;
+}
+  
+.section + .section {
+    margin-top: -50px
+}
+  
+#contacts.section {
+    position: relative;
+    padding-top: 150px;
+    margin-bottom: 20px;
+}
+  
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+    width: 100%
+}
+  
+.my__photo {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+    border: 1px solid var(--text-color)
+}
+  
+.my__photo:after {
+    content: "";
+    background: var(--nav-bg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply
+}
+  
+.my__photo:before {
+    content: "";
+    background: var(--nav-bg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+  
+img.picture {
+    object-fit: cover;
+    height: 150px;
+}
+
+.my__name {
+    flex: auto;
+}
+  
+.section__title {
+      font: 600 45px PPTelegraf;
+      text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 20px
+}
+  
+.mini__title {
+    font: 200 15px PPTelegraf;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+  
+.contacts {
+    margin-left: auto;
+    font: 400 11px inter;
+    letter-spacing: .1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right
+}
+  
+.contacs__item {
+    background: var(--bg-color);
+    padding: 7px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+  
+.contacs__item a {
+    color: var(--text-color);
+}
+  
+.contacs__item a:hover {
+    color: var(--link-color)
+}
+  
+i.fas, i.fab {
+    font-size: 18px;
+    transition: transform .4s var(--cubic) 0s
+}
+  
+.contacs__item:hover i.fas, .contacs__item:hover i.fab {
+    transform: scale(1.4)
+}
+
+.contant__wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+    background: var(--nav-bg);
+    border-radius: 30px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--borders);
+}
+  
+.section__headline {
+    flex: 0 0 auto;
+    font: 200 18px PPTelegraf;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+}
+  
+.content {
+    flex: 1;
+}
+  
+.text {
+   font: 400 13px/1.6 inter 
+}
+  
+.text + .text {
+    margin-top: 1.5em
+}
+
+.skillis__list {
+    font: 400 13px PPTelegraf;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px
+}
+
+.skills__progress {
+    background: var(--progress);
+    height: 10px;
+    width: 80%;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.precent {
+    background: var(--percent);
+    display: block;
+    height: 100%
+}
+
+.precent.html {
+    width: 100%
+}
+
+.precent.css {
+    width: 90%
+}
+
+.precent.js {
+    width: 20%
+}
+
+.precent.git {
+    width: 35%
+}
+
+.precent.ps {
+    width: 100%
+}
+
+.precent.ai {
+    width: 70%
+}
+
+.precent.figma {
+    width: 100%
+}
+
+.code {
+    background: var(--bg-color);
+    border: 1px solid var(--borders);
+    border-radius: 40px;
+    padding: 5px;
+    font: normal 13px/1.5em system;
+    margin-bottom: 25px
+}
+
+.footer .container {
+    background: var(--nav-bg);
+    width: 100%;
+    max-width: 1220px;
+    border-radius: 30px 30px 0px 0px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--borders);
+    border-top: none;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+    font: normal 13px PPTelegraf;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    gap: 30px;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.git i.fab {
+    font-size: 13px
+}
+
+.foo_item.rss__logo {
+    margin-left: auto;
+}
+
+img.rss__logo_pic {
+    width: 70px;
+    filter: invert(100%)
+}
