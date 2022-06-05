@@ -310,7 +310,7 @@ i.fas, i.fab {
 
 .skills__progress {
     background: var(--progress);
-    height: 10gotpx;
+    height: 10px;
     width: 80%;
     margin-left: auto;
     border-radius: 10px;
@@ -348,4 +348,13 @@ i.fas, i.fab {
 
 .precent.figma {
     width: 100%
+}
+
+.code {
+    background: var(--bg-color);
+    border: 1px solid var(--borders);
+    border-radius: 40px;
+    padding: 5px;
+    font: normal 13px/1.5em system;
+    margin-bottom: 25px
 }
